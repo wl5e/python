@@ -53,8 +53,8 @@ def interagir():
     print("\nBonjour ! C'est du code Python !")
     nom = input('Introduisez votre nom, svp :\n')
     prenom = input('Introduisez votre prénom, svp :\n')
-    annee_naissance = input('Introduisez votre année de naissance, svp :\n')
-    mois_naissance = input('Introduisez votre mois de naissance, svp :\n')
+    annee_naissance = input('Introduisez votre année de naissance(chiffre), svp :\n')
+    mois_naissance = input('Introduisez votre mois de naissance(chiffre), svp :\n')
     return nom, prenom, annee_naissance,mois_naissance
 
     #Ne jamais oublier le return dans la fonction !
@@ -66,7 +66,7 @@ def calculer_age(annee_naissance,mois_naissance):
     if int(annee_naissance) < 1900 or int(annee_naissance) > annee_courant:
         annee_naissance = 2000
         print("Attention : L'année de naissance remise par défaut à 2000 !")
-    age = annee_courant - (annee_naissance)
+    age = annee_courant - int(annee_naissance)
     if mois_courant < int(mois_naissance):
         age -= 1
     return age
