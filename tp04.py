@@ -103,6 +103,33 @@ for i in range(nb):
     if nombre < minim:
         minim = nombre
         
-print('Le maximum est :', maxim, '!')
+print('\nLe maximum est :', maxim, '!')
 print('Le minimum est :', minim, '!')
 
+
+def my_min(lis):
+    min = lis[0] # on considère le minimum comme étant la valeur de l'index 0 de la liste
+    for i in lis:
+        if i < min: # si l'élément de la liste est plus petit EN VALEUR que l'index 0, alors
+            min = i # la valeur de l'index sera alors attribué à min et deviendra le nouveau min !
+    return min
+
+#élaborer les fonctions avec les différentes listes comme argument !
+print("\nle minimum : ", my_min([-3.2, 11, 0, 22.3, 4.8]))
+print("le minimum : ", my_min([3.14, 3.14, 3.14]))
+print("le minimum : ", my_min(['tata', 'toto premier', 'titi le grand'])) # fonctionne en nbr de charactere :)
+#print("le minimum : ", my_min(['tata', -3.2, 'toto', 53.8])) ça ne marchera pas non plus
+
+
+# archi basique ...
+
+def min_max(lis):
+    return min(lis), max(lis)
+
+# Pour rappel les tuples à la différence des listes ne sont pas mutables, une fois que la collection
+# ordonnée des élements est établie !
+
+print('\nLe tuple (minimum, maximum) :', min_max([-3.2, 11, 0, 22.3, 4.8]))
+print('Le tuple (minimum, maximum) :', min_max([3.14, 3.14, 3.14]))
+print('Le tuple (minimum, maximum) :', min_max(['tata', 'toto premier', 'titi le grand'] ))
+# print('Le tuple (minimum, maximum) :', min_max(['tata', -3.2, 'toto', 53.8]))
