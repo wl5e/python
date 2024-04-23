@@ -83,3 +83,26 @@ tup[1].extend([31, 32, 33])
 print(tup)
 print(id(tup[1])) #ne changera pas
 
+
+#15
+#récupérez et stockez les nombres introduits par l'utilisateur dans un container approprié ;
+#utilisez des fonctions (prédéfinies) natives appropriées afin de trouver le maximum et le minumum des nombres introduits ;
+#affichez les résultats ainsi calculés.
+
+nb = int(input("Combien de nombres réels voulez-vous introduire, s.v.p. : "))
+
+maxim = float('-inf')
+print('Au début, le maximum vaut :', maxim)
+minim = float('InFinitY')
+print('Au début, le minimum vaut :', minim)
+
+for i in range(nb):
+    nombre = float(input("Entrez le nombre numéro " + str(i+1) + ", s.v.p. : "))
+    if nombre > maxim:
+        maxim = nombre
+    if nombre < minim:
+        minim = nombre
+        
+print('Le maximum est :', maxim, '!')
+print('Le minimum est :', minim, '!')
+
