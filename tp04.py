@@ -1,5 +1,6 @@
 #14
-#Méthode d'indexation
+# Consigne : Méthode d'indexation
+print("\nExercice 14 : Méthode d'indexation")
 
 lis = [10, 11, 12]
     # [ 0 , 1 . 2]
@@ -35,7 +36,8 @@ print(lis.clear()) # supprime les éléments de la liste
 print(lis)
 
 
-#Packing et Unpacking
+# Consigne : Packing et Unpacking
+print("\nExercice : Packing et Unpacking")
 
 val1, val2 = 10, 11
 print('val1 =', val1, 'val2 =', val2)
@@ -82,9 +84,12 @@ print(tup)
 tup[1].extend([31, 32, 33])
 print(tup)
 print(id(tup[1])) #ne changera pas
+print('\n', '#' * 64, '\n')
 
 
 #15
+# Consigne : Trouver le minimum et le maximum d'une liste de nombres
+print("\nExercice 15 : Trouver le minimum et le maximum d'une liste de nombres")
 #récupérez et stockez les nombres introduits par l'utilisateur dans un container approprié ;
 #utilisez des fonctions (prédéfinies) natives appropriées afin de trouver le maximum et le minumum des nombres introduits ;
 #affichez les résultats ainsi calculés.
@@ -106,7 +111,8 @@ for i in range(nb):
 print('\nLe maximum est :', maxim, '!')
 print('Le minimum est :', minim, '!')
 
-
+# Consigne : Définir une fonction pour trouver le minimum d'une liste
+print("\nExercice : Définir une fonction pour trouver le minimum d'une liste")
 def my_min(lis):
     min = lis[0] # on considère le minimum comme étant la valeur de l'index 0 de la liste
     for i in lis:
@@ -122,7 +128,8 @@ print("le minimum : ", my_min(['tata', 'toto premier', 'titi le grand'])) # fonc
 
 
 # archi basique ...
-
+# Consigne : Définir une fonction pour trouver le minimum et le maximum d'une liste
+print("\nExercice : Définir une fonction pour trouver le minimum et le maximum d'une liste")
 def min_max(lis):
     return min(lis), max(lis)
 

@@ -1,6 +1,6 @@
-#11
-#Appel de fonction, changement de paramètres
-
+#12
+# Consigne : Appel de fonction, changement de paramètres
+print("\nExercice 12 : Appel de fonction, changement de paramètres")
 def saluer(s1, s2='ton admirateur'):
     print(s1, 'de la part de', s2, '!')
 
@@ -9,8 +9,8 @@ saluer(formule)
 qui = 'moi'
 saluer(formule, qui)
 
-#Ne pas négliger l'importance des variables global
-
+# Consigne : Ne pas négliger l'importance des variables globales
+print("\nExercice : Ne pas négliger l'importance des variables globales")
 def calculer_moyenne():
     global poids1, poids2 
     poids1, poids2 = 0.4, 0.6
@@ -30,10 +30,10 @@ def calculer_moyenne():
 note1, note2, poids1, poids2 = 5, 6, .25, 0.75
 print('La moyenne vaut:', calculer_moyenne(), '!')
 print('Dans le module, après l\'appel : poids1 =', poids1, 'et poids2 =', poids2, '!')
+print('\n', '#' * 64, '\n')
 
-#12
-#Les fonctions peuvent s'appeler elle-même, c'est ce qu'on appelle la récursivité
-
+# Consigne : Les fonctions peuvent s'appeler elles-mêmes, c'est ce qu'on appelle la récursivité
+print("\nExercice : Les fonctions peuvent s'appeler elles-mêmes, c'est ce qu'on appelle la récursivité")
 def f(n):
     print("Je m'appelle moi-même (n = ", n, ") !", sep='')
     if n == 1:
@@ -44,17 +44,19 @@ def f(n):
 print('\nStart')    
 print(f(7))
 print('\nOkay okay\n')
+print('\n', '#' * 64, '\n')
 
 #13
-#Déterminer l'âge d'une personne
+# Consigne : Déterminer l'âge d'une personne
+print("\nExercice 13 : Déterminer l'âge d'une personne")
 
 def interagir():
     #Introduction des données
     print("\nBonjour ! C'est du code Python !")
-    nom = input('Introduisez votre nom, svp :\n')
-    prenom = input('Introduisez votre prénom, svp :\n')
-    annee_naissance = input('Introduisez votre année de naissance(chiffre), svp :\n')
-    mois_naissance = input('Introduisez votre mois de naissance(chiffre), svp :\n')
+    nom = input('\nIntroduisez votre nom, svp :\n')
+    prenom = input('\nIntroduisez votre prénom, svp :\n')
+    annee_naissance = input('\nIntroduisez votre année de naissance(chiffre), svp :\n')
+    mois_naissance = input('\nIntroduisez votre mois de naissance(chiffre), svp :\n')
     return nom, prenom, annee_naissance,mois_naissance
 
     #Ne jamais oublier le return dans la fonction !
@@ -75,5 +77,5 @@ def calculer_age(annee_naissance,mois_naissance):
     #Puis mentionner quelle propriété appartient à quelle fonction !
 
 nom, prenom, annee_naissance, mois_naissance = interagir()
-print('Bonjour', prenom, nom, '!', '\nVous avez', calculer_age(annee_naissance,mois_naissance), 'ans !', '\nAu revoir !')
+print('\nBonjour', prenom, nom, '!', '\nVous avez', calculer_age(annee_naissance,mois_naissance), 'ans !', '\nAu revoir !')
 

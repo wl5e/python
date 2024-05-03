@@ -1,11 +1,13 @@
 #08
-#Plusieurs variables(x, y, z, t ou u peuvent avoir la "même" valeur mais des types et des identités différents.)
+# Consigne : Démontrer que différentes variables peuvent avoir la même valeur mais des types et des identités différents.
+print("Exercice 08 : Démontrer que différentes variables peuvent avoir la même valeur mais des types et des identités différents.")
 
 x = 5
 y = float(5)
 z = 5.
 t = complex(5)
 u = '5'
+# Affiche la valeur, le type et l'identité de chaque variable.
 print(x)
 print(type(x))
 print(id(x))
@@ -26,25 +28,36 @@ print(u)
 print(type(u))
 print(id(u))
 
-#On peut vérifier si un mot (en tant que chaîne de caractères de type str) est un mot clé ou pas.
+#print(x, type(x), id(x))
+#print(y, type(y), id(y))
+#print(z, type(z), id(z))
+#print(t, type(t), id(t))
+#print(u, type(u), id(u))
+#print('\n', '#' * 64, '\n')
+#print('\n', '#' * 64, '\n')
 
+# Consigne : Vérifier si un mot est un mot clé en Python.
+print("\nExercice : Vérifier si un mot est un mot clé en Python.")
 import keyword
+# 'tata' n'est pas un mot clé, 'del' est un mot clé.
 print(keyword.iskeyword('tata'))
 print(keyword.iskeyword('del'))
 #print(keyword.iskeyword(del))
 
-#Attribution des variables
-
+# Consigne : Attribuer des valeurs à des variables.
+print("\nExercice : Attribuer des valeurs à des variables.")
 u, v = 3, 5
 print('\nu =', u, 'et v=', v)
 #La virgule met une séparation nette
 
+# Consigne : Demandez à l'utilisateur d'entrer trois nombres réels et utilisez une structure conditionnelle pour les comparer.
+print("\nExercice 09 : Demandez à l'utilisateur d'entrer trois nombres réels et utilisez une structure conditionnelle pour les comparer.")
 a = float(input('\nEntrez un premier nombre réel :'))
 b = float(input('\nEntrez un second nombre réel :'))
 c = float(input('\nEntrez un dernier nombre réel :'))
 
-#Les éléments dans l'input sera exposé comme un "print"
-
+# Consigne : Comparez trois nombres réels entrés par l'utilisateur et affichez le plus grand.
+print("\nExercice : Comparez trois nombres réels entrés par l'utilisateur et affichez le plus grand.")
 if a > b:
     if a > c:
         max = a
@@ -58,10 +71,11 @@ else:
         max = c
 
 print('\nLa plus grande valeur aue vous ayez rentré est :', max, " !\n")
+print('\n', '#' * 64, '\n')
 
-#09
-#Résolverzl'équation quadratique (viète), Letsgooooo
-
+#10
+# Consigne : Résolvez l'équation quadratique (viète)
+print("\nExercice 10 : Résolvez l'équation quadratique (viète)")
 print('\nVous avez une équation sous cette forme : ax^2 + bx + c) = 0')
 
 a = float(input('\nentrez votre "a" :'))
@@ -69,7 +83,7 @@ b = float(input('entrez votre "b" :'))
 c = float(input('entrez votre "c" :'))
 
 det = float(b**2 - 4*a*c)
-print ('le déterminant vaut :',det)
+print ('\nle déterminant vaut :',det)
 
 
 if det < 0  :
@@ -84,19 +98,20 @@ elif det > 0 :
     result1 = (-b + det**(1/2))/(2*a)
     result2 = (-b - det**(1/2))/(2*a)
     print('\nIl y a deux solutions à l équation : ', result1, ' et ', result2)
+print('\n', '#' * 64, '\n')
 
-#10
-#Faire le calcul non pondéré d'une moyenne par l'utilisateur.
-
+#11
+# Consigne : Calculez la moyenne non pondérée des notes entrées par l'utilisateur.
+print("\nExercice 11 : Calculez la moyenne non pondérée des notes entrées par l'utilisateur.")
 print("\nLe programme calcule la moyenne des notes entrées par l'utilisateur !")
-val = float(input('Entrez votre première note svp :'))
+val = float(input('\nEntrez votre première note svp :'))
 moyenne = val
 nbr_notes = 1
 
 # Dans un premier temps, on considère qu'on ne rentre qu'une seule note.
 
 iterations = input(
-    'Vous avez entré la première note, voulez-vous en introduire une autre ?\n'
+    '\nVous avez entré la première note, voulez-vous en introduire une autre ?\n'
     '(Oui/ Non)')
 if iterations == 'oui' or iterations == 'Oui' or iterations =='yes' or iterations == 'Yes' or iterations == 'Oui.' or iterations == 'OUI':
     get = True
@@ -111,7 +126,7 @@ while get:
     moyenne += val
     nbr_notes += 1
     iterations = input(
-    'Vous avez entré la première note, voulez-vous en introduire une autre ?\n'
+    '\nVous avez entré la première note, voulez-vous en introduire une autre ?\n'
     '(Oui/ Non)')
     if iterations == 'oui' or iterations == 'Oui' or iterations =='yes' or iterations == 'Yes' or iterations == 'ui':
         get = True
